@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <i class="fa-brands fa-pied-piper-hat"></i>
+                <h1>DayVault</h1>
+            </div>
+            <div class="menu">
+                <div class="menu-item active"><i class="fa-solid fa-house" style="color: coral;"></i><a>Home</a></div>
+                <div class="menu-item dailynotes"><i class="fa-solid fa-book"style="color: rgb(113, 113, 240);"></i><a>All Notes</a></div>
+                <div class="menu-item Status"><i class="fa-solid fa-business-time"style="color: rgb(151, 201, 201);"></i><a>Status</a></div>
+                <div class="menu-item favorites"><i class="fa-solid fa-star" style="color: yellow;"></i><a>Favorites</a></div>
+                <div class="menu-item priority"><i class="fa-solid fa-thumbtack" style="color: red;"></i><a>priority</a></div>
+                <div class="menu-item category"><i class="fa-solid fa-folder" style="color: yellow;"></i><a>Categories</a></div>
+                <div class="menu-item"><i class="fa-solid fa-trash" style="color: lightgray;"></i><a>Trash</a></div>
+                <div class="menu-item"><i class="fa-solid fa-gear" style="color: gray;"></i><a>Settings</a></div>
+            </div>
+        </div>
+        <main class="main-content">
+            <div class="nav">
+                <div class="nav-item"><i class="fa-solid fa-pen-to-square"></i><a>DailyNotes</a></div>
+                <div class="nav-item"><i class="fa-solid fa-calendar-days"></i><a>Calendar</a></div>
+                <div class="nav-item"><i class="fa-solid fa-bell"></i><a>Notification</a></div>
+                <div class="nav-item"><i class="fa-solid fa-circle-user"></i><a>profile</a></div>
+                <div class="corner">
+                    <i class="fa-solid fa-minus"></i>
+                    <i class="fa-solid fa-xmark"></i>
+
+                </div>
+            </div>
+            <div class="content">
+                <button class="btn" id="add">ADD</button>
+                <div class="nodeList">
+
+                </div>
+            </div>
+        </main>
+    </div>
+    <div class="overlay">
+        <div class="overlay-content">
+            <button id="close" style="position: fixed; right:264px;">close</button>
+            <form id="form" style=" display: flex; flex-direction: column; justify-content: spacebetween;">
+                <div class="image-box">
+                    <img src="fav-star.jpg" alt="notes">
+                </div>
+                <div class="image-box1">
+                    <img src="tree.jpeg" alt="notes">
+                </div>
+                <div class="image-box3">
+                    <img src="logo.jpeg" alt="notes">
+                </div>
+                <div class="image-box4">
+                    <img src="calander.jpeg" alt="notes">
+                </div>
+                <label for="title">Title:</label><br>
+                <input type="text" id="title" name="title" style=" width: 600px;"><br>
+                <label for="description">Description:</label><br>
+                <textarea id="description" name="description"></textarea><br>
+                <label for="category">category:</label><br>
+                <select name="category" id="category">
+                    <option value="Study">Study</option>
+                    <option value="Work">Work</option>
+                    <option value="Project">Project</option>
+                    <option value="Home">Home</option>
+                </select><br><br>
+                <label for="status">Status:</label><br>
+                <select name="status" id="status">
+                    <option value="completed">completed</option>
+                    <option value="incompleted">incompleted</option>
+                </select><br><br>
+                <label for="priority">Priority:</label><br>
+                <select name="priority" id="priority">
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select><br><br>
+                <input type="submit" value="submit"style=" width: 600px; border-radius: 10px;background-color: rgb(64, 64, 230);color: white;cursor: pointer;">
+                <div class="box1"></div>
+                <div class="box2"></div>
+                <div class="box3"></div>
+                <div class="box4"></div>
+                <div class="box5"></div>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
